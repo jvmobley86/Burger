@@ -1,0 +1,29 @@
+<div id="burgerInfo">
+    <div id="whole">
+        <h1>Burgers that are not devoured</h1>
+        {{#each burger}}
+        {{#unless devoured}}
+        <h1>{{burger_name}}</h1>
+        <a href="/api/{{id}}">Eat this burger!</a>
+        {{/unless}}
+        {{/each}}
+    </div>
+
+
+    <form id="form">
+        <h1>Add Burger</h1>
+        Burger Name:<br>
+        <input id="burgerName" type="text" placeholder="Ultimate Mac"><br>
+        <button type="submit">Submit </button>
+    </form>
+
+    <div id="devoured">
+        <h1>Burgers that are devoured</h1>
+        {{#each burger}}
+        {{#if devoured}}
+        <h1>{{burger_name}}</h1>
+        <button data-type={{id}} id="delete" type="delete">Delete</button>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>

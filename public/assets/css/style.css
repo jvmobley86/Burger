@@ -1,0 +1,12 @@
+#burgerInfo{
+    background-color: aqua;
+}
+
+#devoured, #whole, #form{
+   display: inline-block;
+}
+
+#pic{
+    width: 187px;
+    margin: auto;
+}
